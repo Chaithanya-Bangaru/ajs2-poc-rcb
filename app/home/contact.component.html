@@ -1,0 +1,22 @@
+<div class="panel panel-primary">
+    <div class="panel-heading" align='center'>
+        {{contactButtonLabel}}
+        <!-- One way binding of property "pageTitle" from Component to Template/DOM-->
+    </div>
+    <div class="panel-body">
+
+        <div class="row">
+            <div class="text-center">
+                <h4 class="text-center">Angular 2 P.O.C being developed by Chaithanya - Work In Progress....</h4>
+                <!-- One way binding ====>>>> of property "hColor" from Component to Template/DOM-->
+                <h5 class="text-center">Email : <a href='mailto:rcbangar@upcontractor.up.com' [style.color]="hColor">rbangaru@prokarma.com</a></h5>
+                <h5 class="text-center">Phone : <span [style.color]="hColor">402-913-2948</span></h5>
+
+                <!--<h5 class="text-center"><a href='http://69.58.243.48:3000' >Home</a></h5> -->
+                <h5 class="text-center"><a href='https://code.angularjs.org/' target="_blank">Angular JS Versions Reference</a></h5>
+                <h4 class="text-center"><button [attr.aria-label]="homeButtonLabel"  class="btn btn-primary" on-click='goHome()'>Home</button></h4>
+                <h5 class="text-center"><a href='http://a2-first-look.azurewebsites.net/' target="_blank" [style.color]="hColor">Reference Site</a></h5>
+            </div>
+        </div>
+    </div>
+</div>

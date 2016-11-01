@@ -1,0 +1,36 @@
+<div class="panel panel-primary">
+    <div class="panel-heading" align='center'>
+        Angular 2 Tutorial
+    </div>
+    <div class="panel-body">
+        <div class="row" [class.selected]= "isSelected">
+            <div class="text-center">
+                Work In Progress..angular2.tutorial.component HTML
+            </div>
+            <div class="text-center">
+                <h4 class="text-center">Event Binding example : </h4>
+                First name : <input type="text" value="" (input)="value=$event.target.value" /> 
+                <h4 class="text-center">{{value}}</h4>
+            </div>
+
+            <div class="text-center">
+                <h4 class="text-center">Structural Directives example : </h4>
+                <!--[ngStyle] = "{'visibility':'hidden' }"-->
+                <div width='400px' align='center'>
+                    <h4 class="text-center">Http service example : </h4>
+                <button class="btn btn-primary" (click)='getVehicles()'>Show / Hide Vehicles</button>
+                    <table>
+                        <tr>
+                            <td>
+                                <ul *ngIf='showVehicles'> <!-- Structural Directive examples-->
+                                    <li *ngFor='#vehicle of vehicles|async '> {{vehicle.vehicleName}} </li> 
+                                    <!-- pipe async is subscribing to the vehicles which is simplified version without the subscribe code-->
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

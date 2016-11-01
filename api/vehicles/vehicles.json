@@ -1,0 +1,29 @@
+{
+    "vehicleJsonDataVar": 
+    [
+        {
+            "vehicleId": "1",
+            "vehicleName": "Audi"
+        },
+        {
+            "vehicleId": "2",
+            "vehicleName": "BMW"
+        },
+        {
+            "vehicleId": "3",
+            "vehicleName": "Cadillac"
+        },
+        {
+            "vehicleId": "4",
+            "vehicleName": "Dodge"
+        },
+        {
+            "vehicleId": "5",
+            "vehicleName": "Eodge"
+        },
+        {
+            "vehicleId": "6",
+            "vehicleName": "Ford"
+        }
+    ]
+}

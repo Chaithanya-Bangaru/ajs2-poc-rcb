@@ -1,0 +1,87 @@
+<div class='panel panel-primary'>
+    <div class='panel-heading' align='center'>
+        {{pageTitle}}
+    </div>
+
+    <div align='center'>
+        <table>
+
+            <br>
+            <tr>
+                <td><b> Filter by : &nbsp;</b></td>
+                <td><input type='text' [(ngModel)]='listFilterString' autofocus/></td>
+            </tr>
+        </table>
+    </div>
+    <div class='panel-body'>
+
+        <!--<div class='row' >
+            <div class='col-md-6' >
+                <h3>Filtered by: {{listFilter}}</h3>
+            </div>
+        </div>-->
+
+        <!--<div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div>-->
+
+        <div class='table-responsive' align='center'>
+            <table style="width:90%" class='table' *ngIf='products && products.length'>
+                <thead>
+                    <tr>
+                        <th>
+                            <button class='btn btn-primary' (click)='toggleImage();'>
+                                {{showImage ? 'Hide Image' : 'Show Image'}}
+                            </button>
+                        </th>
+                        <th>Product Link</th>
+                        <th>Code</th>
+                        <th>Available</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th>5 Star Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='#product of products | productFilter : listFilterString'>
+                        <td [style.background] = bColor>
+                            <!--<a>
+                            <img *ngIf='showImage' 
+                                [src]='product.imageUrl' 
+                                [title] = 'product.productName | lowercase' 
+                                [style.width.px] = imageWidth 
+                                [style.margin.px] = imageMargin 
+
+                                ------bind-style.width.px=imageWidth [style.margin.px]=imageMargin------
+                                -------------OR----------------
+                                ------ngStyle is convenient for setting multiple props---Example--  [ngStyle] = "{'width':'86px' , 'margin' : '2'}"   ----------
+                                ------style dot is convenient for setting a single prop like style.width----Example--- [style.width] = "86"  ----------
+                            />
+                            </a>-->
+                            <!-- "bind-src" is long form of "[src]" ie. omit square brackets and prepend bind hiphen  -->
+                            <a [routerLink]="['ProductDetailComponent',{id : product.productId}] ">
+                                <img *ngIf='showImage' [src]='product.imageUrl' bind-title='product.productName | lowercase' 
+                                     [ngStyle] = "{'width':'86px' , 'margin' : '2'}"
+                                    />
+                            </a>
+
+                            <!--<td> <a >{{product.productName}}</a> </td>-->
+                        </td>
+                        <!--<td>{{product.productName}}</td>-->
+                        <td width="100px"> <a [style.color]="purpleColor" [routerLink]="['ProductDetailComponent',{id : product.productId}] ">{{product.productName}}</a>                            </td>
+                        <!--<td> {{product.productName}}</td>-->
+                        <td>{{product.productCode }}</td>
+                        <td>{{product.releaseDate | uppercase}}</td>
+                        <td>{{product.price | currency :'USD':true:'2.2-2'}}</td>
+                        <td>{{product.description}}</td>
+                        <!--<td>{{product.starRating}}</td>-->
+                        <td>
+                            <pi-star [rating]='product.starRating' [style.color]="greyColor" (ratingClicked)='onRatingClicked($event)'>
+                            </pi-star>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--<h4 class="text-center"><a href='http://localhost:3000'>Home</a></h4>-->
+            <h4 class="text-center"><button class="btn btn-primary" (click)='goHome()'>Home</button></h4>
+        </div>
+    </div>
+</div>

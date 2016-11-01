@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <base href="/"> <!-- This lets browser know where is the root URL, this is a first step for routing.-->
+    <title>Angular2 POC-Chaitanya</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="app/app.component.css" rel="stylesheet" />
+
+    <!-- 1. Load libraries -->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>  
+
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script> <!--3rd party reactive extensions-->
+     <!-- Angular 2 script-->
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    
+    <!--http service script-->
+    <script src="node_modules/angular2/bundles/http.dev.js"></script>  <!-- provided as a separate http module because, fetch protocol also could be used  -->
+
+    <script src='node_modules/angular2/bundles/router.dev.js'></script>
+
+    <!-- 2. Configure SystemJS so all js files will be imported at once-->
+    <script>
+        System.config({
+        packages: {        
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('app/main')  // main.ts is used
+            .then(null, console.error.bind(console));
+    </script>
+</head>
+
+<body>
+   <raja-angular2-app>Loading Application..please wait...</raja-angular2-app>
+
+</body>
+
+</html>
