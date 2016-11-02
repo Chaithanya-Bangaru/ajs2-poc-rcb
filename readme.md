@@ -21,3 +21,13 @@ git push -u origin master
 
 git remote add origin https://github.com/RCBAN/angular2-poc-chaithanya.git
 git push -u origin master
+
+https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
+--If you get an error like below :
+
+ setting certificate verify locations:
+  CAfile: C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+  CApath: none
+-----
+
+>git config --system http.sslverify false
