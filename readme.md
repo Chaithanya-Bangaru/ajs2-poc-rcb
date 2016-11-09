@@ -35,3 +35,9 @@ https://help.github.com/articles/adding-an-existing-project-to-github-using-the-
 -----
 
 >git config --system http.sslverify false
+
+Notes :
+JSON API :
+Example 1 : http://localhost:3000/api/vehicles/vehicles.json
+Example 2 : http://localhost:3000/api/products/products.json
+Live feed Example : http://finance.google.com/finance/info?q=DOW:AAPL

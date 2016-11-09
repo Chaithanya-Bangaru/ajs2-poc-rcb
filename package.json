@@ -2,7 +2,7 @@
   "name": "Angular-2-POC-Concepts-app",
   "version": "1.0.0",
   "author": "Chaitanya",
-  "description": "Package for the Acme Product Management sample application",
+  "description": "Package for the Angular 2 concepts application",
   "scripts": {
     "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "tsc": "tsc",
