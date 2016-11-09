@@ -1,4 +1,4 @@
-1) Open a command prompt in the project's root directory (APM - Start)
+1) Open a command prompt in the project's root directory - ajs2-poc-rcb
 
 2) Type: `npm install`
     This installs the dependencies as defined in the package.json file.
@@ -7,19 +7,14 @@
     This launches the TypeScript compiler (tsc) to compile the application and wait for changes. 
     It also starts the lite-server and launches the browser to run the application.
 
+NOTE : If error with npm start , check the version of angular 2 in package.json -->  "angular2": "2.0.0-beta.9",
+Git Repo commit instructions :
 
-
-…or create a new repository on the command line
-
-echo "# angular2-poc-chaithanya" >> README.md
+In the root directory,
 git init
-git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/RCBAN/angular2-poc-chaithanya.git
-git push -u origin master
-…or push an existing repository from the command line
 
-git remote add origin https://github.com/RCBAN/angular2-poc-chaithanya.git
 git push -u origin master
 
 https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
