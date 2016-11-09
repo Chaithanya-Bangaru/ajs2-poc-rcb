@@ -10,6 +10,11 @@
 NOTE : If error with npm start , check the version of angular 2 in package.json -->  "angular2": "2.0.0-beta.9",
 Git Repo commit instructions :
 
+<<<<<<< HEAD
+=======
+Git Repo commit instructions :
+
+>>>>>>> 506f194867548dbdb807eb3385a9ca742a08f037
 In the root directory,
 git init
 git commit -m "first commit"
