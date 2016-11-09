@@ -17,6 +17,10 @@ git remote add origin https://github.com/RCBAN/angular2-poc-chaithanya.git
 
 git push -u origin master
 
+github cred
+chaithanya.bangaru@gmail.com
+a-----@--3
+
 https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
 --If you get an error like below :
 
