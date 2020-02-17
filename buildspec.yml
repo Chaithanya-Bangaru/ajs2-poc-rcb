@@ -24,7 +24,7 @@ phases:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
-      - mvn install
+      - npm install
     finally:
       - echo This always runs even if the install command fails
   post_build:
