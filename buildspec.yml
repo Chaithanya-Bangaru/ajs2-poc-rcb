@@ -24,7 +24,7 @@ phases:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
-      - npm install
+      - mvn install
     finally:
       - echo This always runs even if the install command fails
   post_build:
@@ -46,16 +46,16 @@ reports:
     file-format: CucumberJson # default is JunitXml
 artifacts:
   files:
-    - dist/Angular-2-POC-Concepts-app-1.0.0.jar
+    - target/ps-guitar-rest-1.0.0.SNAPSHOT.jar
   discard-paths: yes
   secondary-artifacts:
     artifact1:
       files:
-        - Angular-2-POC-Concepts-app-1.0.0.jar
+        - ps-guitar-rest-1.0.0.SNAPSHOT.jar
       discard-paths: yes
     artifact2:
       files:
-        - dist/Angular-2-POC-Concepts-app-1.0.0.jar
+        - target/ps-guitar-rest-1.0.0.SNAPSHOT.jar
       discard-paths: yes
 cache:
   paths:
