@@ -46,16 +46,16 @@ reports:
     file-format: CucumberJson # default is JunitXml
 artifacts:
   files:
-    - target/messageUtil-1.0.jar
+    - target/Angular-2-POC-Concepts-app-1.0.0.jar
   discard-paths: yes
   secondary-artifacts:
     artifact1:
       files:
-        - target/messageUtil-1.0.jar
+        - Angular-2-POC-Concepts-app-1.0.0.jar
       discard-paths: yes
     artifact2:
       files:
-        - target/messageUtil-1.0.jar
+        - target/Angular-2-POC-Concepts-app-1.0.jar
       discard-paths: yes
 cache:
   paths:
